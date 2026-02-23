@@ -94,9 +94,9 @@ Managing layout balance and spacing
 
 Deploying and configuring a client-side routed application
 
-Live Demo
+Live Demo 
 
-Add your Netlify link here.
+https://playful-ui-demo.netlify.app/
 
 Development Approach
 
