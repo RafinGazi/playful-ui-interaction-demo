@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+Playful UI Interaction Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React single-page application exploring interactive UI behaviour, state management, conditional rendering, and responsive layout design.
 
-## Available Scripts
+This project began as a small creative interaction and was later refactored into a structured UI demo suitable for portfolio presentation.
 
-In the project directory, you can run:
+Overview
 
-### `npm start`
+This project focuses on how interfaces behave, rather than complex backend logic.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+It demonstrates:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+State management using useState
 
-### `npm test`
+Conditional rendering patterns
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dynamic component rendering from mapped data
 
-### `npm run build`
+Event handling and user-triggered state updates
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Responsive layout techniques using Tailwind CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Client-side routing with React Router
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Proper SPA deployment configuration using a _redirects file
 
-### `npm run eject`
+Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application is organised into modular sections that each demonstrate a specific frontend concept.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Modal Interaction Demo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This module demonstrates:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Conditionally mounting and unmounting components
 
-## Learn More
+Controlling scroll behaviour inside modals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Resetting state to remove components from the DOM
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Responsive layout using flexbox
 
-### Code Splitting
+The focus here is on how UI visibility is controlled through predictable state changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Layout and External Link Demo
 
-### Analyzing the Bundle Size
+This section demonstrates:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Card-based layout design
 
-### Making a Progressive Web App
+Image overlay positioning
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Visual hierarchy and spacing control
 
-### Advanced Configuration
+Safe external linking using rel="noopener noreferrer"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The emphasis is on layout clarity and structural consistency.
 
-### Deployment
+Dynamic Interaction Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This module demonstrates:
 
-### `npm run build` fails to minify
+Rendering UI elements from mapped arrays
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Handling click events cleanly
+
+Updating UI based on state changes
+
+Providing conditional feedback to users
+
+This section highlights reusable patterns and state-driven interaction design.
+
+Technical Stack
+
+React (functional components)
+
+React Router
+
+Tailwind CSS
+
+Netlify for deployment
+
+SPA routing configuration using a _redirects file
+
+Key Concepts Practiced
+
+Designing predictable state-driven interfaces
+
+Structuring UI components in a modular way
+
+Separating routing logic from component logic
+
+Managing layout balance and spacing
+
+Deploying and configuring a client-side routed application
+
+Live Demo
+
+Add your Netlify link here.
+
+Development Approach
+
+This project was built iteratively with AI-assisted refinement during implementation. Core architectural decisions, state logic, routing structure, and layout adjustments were intentionally reviewed and understood throughout the development process.
+
+The goal was not only to build the interface, but to understand the reasoning behind each structural and interaction decision.
