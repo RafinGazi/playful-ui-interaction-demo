@@ -10,26 +10,27 @@ function Yes() {
       flex flex-col
       items-center
       text-center
-      bg-gradient-to-br from-rose-300 via-pink-300 to-red-300
+      bg-gradient-to-br from-rose-200 via-pink-200 to-rose-300
       px-6
     ">
 
+      {/* Back button */}
       <button
         onClick={() => navigate("/")}
-        className="fixed top-4 left-4 z-10 text-gray-800 font-medium"
+        className="fixed top-4 left-4 z-10 text-gray-700 font-medium"
       >
         ← Back
       </button>
 
-      {/* Top message */}
-      <div className="pt-16 max-w-md animate-fade-up">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-          I knew you’d say yes 💖
+      {/* Header */}
+      <div className="pt-16 max-w-lg">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-rose-600">
+          Interaction Modules
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-800">
-          You just made me the happiest person.
-          Ready for what comes next? 😊
+        <p className="text-lg md:text-xl text-gray-700">
+          Select a section below to explore different UI behaviours,
+          layout techniques, and component interactions.
         </p>
       </div>
 
@@ -38,69 +39,75 @@ function Yes() {
         <div
           className="
             grid grid-cols-1 sm:grid-cols-3
-            gap-6
-            max-w-3xl w-full
+            gap-8
+            max-w-4xl w-full
             mt-12
-            animate-fade-up
           "
-          style={{ animationDelay: "0.2s" }}
         >
-          {/* Gifts */}
+
+          {/* Modal Interaction */}
           <div
-            onClick={() => navigate("/gifts")}
-            className="bg-white/30 backdrop-blur-md rounded-2xl p-4 sm:p-6
-              h-[140px] flex flex-col items-center justify-center
+            onClick={() => navigate("/modal-demo")}
+            className="bg-white/40 backdrop-blur-md rounded-2xl p-6
+              h-[160px] flex flex-col items-center justify-center
               shadow-lg transition transform hover:scale-105 active:scale-95 cursor-pointer"
           >
-            <div className="text-5xl mb-4">🎁</div>
-            <div className="text-xl font-semibold text-gray-700">Gifts</div>
+            <div className="text-4xl mb-3">🧩</div>
+            <div className="text-lg font-semibold text-gray-700">
+              Modal Interaction
+            </div>
           </div>
 
-          {/* Brunch */}
+          {/* Layout Demo */}
           <div
-            onClick={() => navigate("/brunch")}
-            className="bg-white/30 backdrop-blur-md rounded-2xl p-4 sm:p-6
-              h-[140px] flex flex-col items-center justify-center
+            onClick={() => navigate("/layout-demo")}
+            className="bg-white/40 backdrop-blur-md rounded-2xl p-6
+              h-[160px] flex flex-col items-center justify-center
               shadow-lg transition transform hover:scale-105 active:scale-95 cursor-pointer"
           >
-            <div className="text-5xl mb-4">🥐</div>
-            <div className="text-xl font-semibold text-gray-700">Brunch</div>
+            <div className="text-4xl mb-3">📐</div>
+            <div className="text-lg font-semibold text-gray-700">
+              Layout Demo
+            </div>
           </div>
 
-          {/* Dinner */}
+          {/* Conditional Rendering */}
           <div
-            onClick={() => navigate("/dinner")}
-            className="bg-white/30 backdrop-blur-md rounded-2xl p-4 sm:p-6
-              h-[140px] flex flex-col items-center justify-center
+            onClick={() => navigate("/interaction-demo")}
+            className="bg-white/40 backdrop-blur-md rounded-2xl p-6
+              h-[160px] flex flex-col items-center justify-center
               shadow-lg transition transform hover:scale-105 active:scale-95 cursor-pointer"
           >
-            <div className="text-5xl mb-4">🍽️</div>
-            <div className="text-xl font-semibold text-gray-700">Dinner</div>
+            <div className="text-4xl mb-3">⚡</div>
+            <div className="text-lg font-semibold text-gray-700">
+              Conditional Rendering
+            </div>
           </div>
+
         </div>
       </div>
 
-      {/* Thank you section */}
-      <div className="pb-12 flex flex-col items-center animate-fade-up">
-        <p className="text-white/80 mb-4 mt-4">
-          Whenever you’re ready…
+      {/* Completion Section */}
+      <div className="pb-12 flex flex-col items-center">
+        <p className="text-gray-600 mb-4">
+          Explore all modules or finish the demo.
         </p>
 
         <button
-          onClick={() => navigate("/thank-you")}
+          onClick={() => navigate("/complete")}
           className="
             px-10 py-4
             rounded-full
-            bg-white/60 backdrop-blur-md
-            text-rose-700
+            bg-rose-500
+            text-white
             font-semibold
             text-lg
-            shadow-lg
-            hover:bg-white/80
+            shadow-md
+            hover:bg-rose-600
             transition
           "
         >
-          Thank you 💖
+          Complete Demo
         </button>
       </div>
 

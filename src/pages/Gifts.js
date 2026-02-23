@@ -6,151 +6,134 @@ import chocolateImage from "../assets/images/chocolate.png";
 
 function Gifts() {
   const navigate = useNavigate();
-  const [selectedGift, setSelectedGift] = useState(null);
+  const [selectedModule, setSelectedModule] = useState(null);
 
   return (
-    <div className="relative h-screen bg-gradient-to-br from-pink-200 via-pink-300 to-rose-300 px-6">
+    <div className="relative h-screen bg-gradient-to-br from-rose-100 via-pink-100 to-rose-200 px-6">
 
       {/* Back button */}
       <button
-        onClick={() => navigate("/yes")}
-        className="fixed top-4 left-4 z-10 text-gray-800 font-medium"
+        onClick={() => navigate("/modules")}
+        className="fixed top-4 left-4 z-10 text-gray-700 font-medium"
       >
         ← Back
       </button>
 
-      {/* Gift cards */}
+      {/* Module selection */}
       <div className="h-full flex items-center justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 sm:gap-20 max-w-xl w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-xl w-full">
 
           <div
-            onClick={() => setSelectedGift("flowers")}
-            className="bg-white/30 backdrop-blur-md rounded-2xl p-8 flex flex-col items-center shadow-lg transition transform hover:scale-105 active:scale-95 cursor-pointer"
+            onClick={() => setSelectedModule("image")}
+            className="bg-white/40 backdrop-blur-md rounded-2xl p-8 flex flex-col items-center shadow-lg transition transform hover:scale-105 active:scale-95 cursor-pointer"
           >
-            <div className="text-6xl mb-4">🌸</div>
-            <div className="text-xl font-semibold text-gray-700">Flowers</div>
+            <div className="text-5xl mb-4">🖼️</div>
+            <div className="text-lg font-semibold text-gray-700">
+              Image Preview Modal
+            </div>
           </div>
 
           <div
-            onClick={() => setSelectedGift("chocolate")}
-            className="bg-white/30 backdrop-blur-md rounded-2xl p-8 flex flex-col items-center shadow-lg transition transform hover:scale-105 active:scale-95 cursor-pointer"
+            onClick={() => setSelectedModule("content")}
+            className="bg-white/40 backdrop-blur-md rounded-2xl p-8 flex flex-col items-center shadow-lg transition transform hover:scale-105 active:scale-95 cursor-pointer"
           >
-            <div className="text-6xl mb-4">🍫</div>
-            <div className="text-xl font-semibold text-gray-700">Chocolate</div>
+            <div className="text-5xl mb-4">📄</div>
+            <div className="text-lg font-semibold text-gray-700">
+              Content Variant Modal
+            </div>
           </div>
 
         </div>
       </div>
 
       {/* Modal */}
-      {selectedGift && (
+      {selectedModule && (
         <div
           className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center px-4"
-          onClick={() => setSelectedGift(null)}
+          onClick={() => setSelectedModule(null)}
         >
-          {/* Modal container */}
           <div
-            className="
-              bg-white rounded-2xl shadow-2xl
-              w-full max-w-4xl
-              max-h-[100dvh]
-              animate-fade-up
-              flex flex-col
-            "
+            className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[100dvh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Scrollable content */}
             <div className="flex-1 overflow-y-auto">
               <div className="flex flex-col md:flex-row">
 
-                {/* Image */}
-                <div className="md:w-1/2 bg-rose-50 flex items-center justify-center p-4">
+                {/* Image Section */}
+                <div className="md:w-1/2 bg-gray-50 flex items-center justify-center p-6">
                   <img
-                    src={selectedGift === "flowers" ? flowerImage : chocolateImage}
-                    alt={selectedGift}
+                    src={selectedModule === "image" ? flowerImage : chocolateImage}
+                    alt="Preview"
                     className="w-full max-h-[70vh] object-cover rounded-xl"
                   />
                 </div>
 
-                {/* Text */}
-                <div className="md:w-1/2 p-6">
-                  {selectedGift === "flowers" && (
+                {/* Text Section */}
+                <div className="md:w-1/2 p-8">
+                  {selectedModule === "image" && (
                     <>
-                      <h2 className="text-2xl font-bold mb-4 text-rose-500">
-                        Why these flowers 🌸
+                      <h2 className="text-2xl font-bold mb-4 text-rose-600">
+                        Modal State Control
                       </h2>
 
                       <p className="text-gray-700 mb-4">
-                        At the centre are white, pink, and red roses. They are symbols of
-                        pure love, gentle affection, and a love that grows deeper
-                        every day. They’re your favourite, and it felt right that
-                        they sit at the heart of it all.
+                        This example demonstrates conditional rendering
+                        based on React state. When a module is selected,
+                        a modal component is dynamically mounted.
                       </p>
 
                       <p className="text-gray-700 mb-4">
-                        Surrounding them are colourful tulips. In the language of
-                        flowers, tulips represent warmth, joy, and a love that
-                        feels safe and true — just like the many beautiful sides
-                        of you.
+                        The layout adapts responsively using flexbox,
+                        and scroll behavior is controlled using a
+                        dedicated overflow container.
                       </p>
 
                       <p className="text-gray-700">
-                        And around everything are blue chrysanthemums — my
-                        favourite. A quiet promise of loyalty, calm, and care.
+                        Closing the modal resets the state to <strong>null</strong>,
+                        removing it from the DOM.
                       </p>
                     </>
                   )}
 
-                  {selectedGift === "chocolate" && (
+                  {selectedModule === "content" && (
                     <>
-                      <h2 className="text-2xl font-bold mb-4 text-rose-500">
-                        Something sweet 🍫
+                      <h2 className="text-2xl font-bold mb-4 text-rose-600">
+                        Conditional Content Rendering
                       </h2>
 
                       <p className="text-gray-700 mb-4">
-                        I didn’t choose these chocolates because they’re perfect.
-                        I chose them because they’re comforting, warm, and meant
-                        to be shared.
+                        Different content blocks are rendered depending
+                        on which card is selected.
                       </p>
 
                       <p className="text-gray-700 mb-4">
-                        Just like the little moments with you. Sitting close,
-                        laughing softly, enjoying something sweet together.
+                        This demonstrates how state-driven UI patterns
+                        can dynamically switch content while maintaining
+                        consistent layout structure.
                       </p>
 
                       <p className="text-gray-700">
-                        It’s not about the chocolate. It’s about the feeling of
-                        sharing it with you. 💖
+                        The component remains reusable and scalable,
+                        as additional variants can be introduced with
+                        minimal structural changes.
                       </p>
                     </>
                   )}
                 </div>
+
               </div>
             </div>
 
-            {/* Sticky Close button */}
-            <div
-              className="
-                sticky bottom-0
-                bg-white/95 backdrop-blur
-                flex justify-center
-                p-4
-                border-t border-rose-100
-              "
-            >
+            {/* Close button */}
+            <div className="sticky bottom-0 bg-white/95 flex justify-center p-4 border-t">
               <button
-                onClick={() => setSelectedGift(null)}
-                className="
-                  w-full max-w-xs
-                  px-8 py-3
-                  rounded-full
-                  bg-rose-500 text-white
-                  font-semibold
-                  hover:bg-rose-600
-                  transition">
-                Close 💖
+                onClick={() => setSelectedModule(null)}
+                className="w-full max-w-xs px-8 py-3 rounded-full bg-rose-500 text-white font-semibold hover:bg-rose-600 transition"
+              >
+                Close Module
               </button>
             </div>
+
           </div>
         </div>
       )}
