@@ -1,76 +1,76 @@
-Playful UI Interaction Demo
+# Playful UI Interaction Demo
 
 A React single-page application exploring interactive UI behaviour, state management, conditional rendering, and responsive layout design.
 
 This project began as a small creative interaction and was later refactored into a structured UI demo suitable for portfolio presentation.
 
-Overview
+## Overview
 
 This project focuses on how interfaces behave, rather than complex backend logic.
 
 It demonstrates:
 
-State management using useState
+- State management using useState
 
-Conditional rendering patterns
+- Conditional rendering patterns
 
-Dynamic component rendering from mapped data
+- Dynamic component rendering from mapped data
 
-Event handling and user-triggered state updates
+- Event handling and user-triggered state updates
 
-Responsive layout techniques using Tailwind CSS
+- Responsive layout techniques using Tailwind CSS
 
-Client-side routing with React Router
+- Client-side routing with React Router
 
-Proper SPA deployment configuration using a _redirects file
+- Proper SPA deployment configuration using a _redirects file
 
-Project Structure
+## Project Structure
 
 The application is organised into modular sections that each demonstrate a specific frontend concept.
 
-Modal Interaction Demo
+### Modal Interaction Demo
 
 This module demonstrates:
 
-Conditionally mounting and unmounting components
+- Conditionally mounting and unmounting components
 
-Controlling scroll behaviour inside modals
+- Controlling scroll behaviour inside modals
 
-Resetting state to remove components from the DOM
+- Resetting state to remove components from the DOM
 
-Responsive layout using flexbox
+- Responsive layout using flexbox
 
 The focus here is on how UI visibility is controlled through predictable state changes.
 
-Layout and External Link Demo
+### Layout and External Link Demo
 
 This section demonstrates:
 
-Card-based layout design
+- Card-based layout design
 
-Image overlay positioning
+- Image overlay positioning
 
-Visual hierarchy and spacing control
+- Visual hierarchy and spacing control
 
-Safe external linking using rel="noopener noreferrer"
+- Safe external linking using rel="noopener noreferrer"
 
 The emphasis is on layout clarity and structural consistency.
 
-Dynamic Interaction Demo
+### Dynamic Interaction Demo
 
 This module demonstrates:
 
-Rendering UI elements from mapped arrays
+- Rendering UI elements from mapped arrays
 
-Handling click events cleanly
+- Handling click events cleanly
 
-Updating UI based on state changes
+- Updating UI based on state changes
 
-Providing conditional feedback to users
+- Providing conditional feedback to users
 
 This section highlights reusable patterns and state-driven interaction design.
 
-Technical Stack
+## Technical Stack
 
 React (functional components)
 
@@ -82,7 +82,7 @@ Netlify for deployment
 
 SPA routing configuration using a _redirects file
 
-Key Concepts Practiced
+## Key Concepts Practiced
 
 Designing predictable state-driven interfaces
 
@@ -94,11 +94,11 @@ Managing layout balance and spacing
 
 Deploying and configuring a client-side routed application
 
-Live Demo 
+# Live Demo 
 
-https://playful-ui-demo.netlify.app/
+**https://playful-ui-demo.netlify.app/**
 
-Development Approach
+## Development Approach
 
 This project was built iteratively with AI-assisted refinement during implementation. Core architectural decisions, state logic, routing structure, and layout adjustments were intentionally reviewed and understood throughout the development process.
 
